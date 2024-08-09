@@ -20,10 +20,14 @@ Bulk email access checker tool, searches through a list of email accounts for sp
 
 1. Install required packages:
    ```
-   pip install termcolor
+   pip3 install termcolor
    ```
 
-2. Create a `config.json` file with email provider settings:
+
+2. Prepare a combolist file with email:password pairs, one per line.
+
+3. Optionally you can add email servers:
+  Open the `config.json` file with email provider settings:
    ```json
    [
      {
@@ -34,10 +38,8 @@ Bulk email access checker tool, searches through a list of email accounts for sp
    ]
    ```
 
-3. Prepare a combolist file with email:password pairs, one per line.
-
 ## Usage
-`python main.py combolist.txt --threads 20 --search-in subject --keyword "important" --since 01-Jan-2024`
+`python3 main.py combolist.txt --threads 20 --search-in subject --keyword "important" --since 01-Jan-2024`
 
 Arguments:
 - `combolist`: Path to the combolist file
